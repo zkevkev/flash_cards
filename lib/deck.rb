@@ -6,10 +6,21 @@ class Deck
   end
 
   def cards_in_category(category)
-    question_and_answer = cards.select do |card|
-      card.categorization == category
+    question_and_answer = @cards.select do |card|
+      card.category == category
     end
+  end
 
-    question_and_answer
+  def count
+    @cards.count
+  end
+
+  def top_of_deck
+    @cards[0]
+  end
+
+  def next_card
+    @cards.shift
   end
 end
+

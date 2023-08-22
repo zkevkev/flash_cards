@@ -17,7 +17,7 @@ RSpec.describe Deck do
     deck = Deck.new(cards)
 
     expect(cards.count).to eq(3)
-    expect(deck.cards.count).to eq(3)
+    expect(deck.cards).to eq(cards)
   end
 
   it 'can call cards in a category' do
@@ -28,5 +28,6 @@ RSpec.describe Deck do
     deck = Deck.new(cards)
 
     #Need to make test which calls category and returns cards in that category
+    expect(deck.cards_in_category(:Geography)).to eq([card_1])
   end
 end

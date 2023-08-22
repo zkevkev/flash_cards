@@ -6,4 +6,8 @@ class Card
     @answer = answer
     @category = category
   end
+
+  def categorization
+    @category
+  end
 end

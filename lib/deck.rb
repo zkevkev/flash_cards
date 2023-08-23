@@ -14,13 +14,4 @@ class Deck
   def count
     @cards.count
   end
-
-  def top_of_deck
-    @cards[0]
-  end
-
-  def next_card
-    @cards.shift
-  end
 end
-

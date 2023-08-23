@@ -1,22 +1,26 @@
+require './lib/card'
 require './lib/turn'
 
 RSpec.describe Turn do
   it 'exists' do
-    turn = Turn.new("Juneau", "Juneau")
+    card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
+    turn = Turn.new("Juneau", card)
 
     expect(turn).to be_instance_of(Turn)
   end
 
   it 'returns the guess' do 
-    turn = Turn.new("Juneau", "Juneau")
+    card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
+    turn = Turn.new("Juneau", card)
 
     expect(turn.guess).to eq('Juneau')
   end
 
   it 'returns the correct answer' do
-    turn = Turn.new("Juneau", "Juneau")
+    card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
+    turn = Turn.new("Juneau", card)
 
-    expect(turn.card).to eq('Juneau')
+    expect(turn.card).to eq(card)
   end
   
   it 'determines if the answer is correct' do

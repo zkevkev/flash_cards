@@ -15,7 +15,7 @@ class Turn
   end
 
   def correct?
-    @string == @card
+    @string == @card.answer
   end
 
   def feedback
